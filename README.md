@@ -24,6 +24,34 @@ A struct é usada como base para a paleta de cores predefinidas do programa.
 
 ---
 
+##  paleta[]— Cores predefinidas disponíveis
+
+O array `paleta[]` armazena uma lista de cores predefinidas que o usuário pode selecionar para desenhar na tela VGA. Cada entrada é do tipo `Cor`, uma `struct` que contém:
+
+* `nome`: uma `string` com o nome da cor em letras maiúsculas.
+* `valor`: um `uint16_t` contendo o valor da cor codificado em formato RGB565 (5 bits para vermelho, 6 para verde, 5 para azul), padrão da tela VGA da FPGA.
+
+Exemplo de definição no código:
+
+```c
+const Cor paleta[] = {
+    {"PRETO",    0x0000},
+    {"BRANCO",   0xFFFF},
+    {"CINZA",    0x8410},
+    {"VERMELHO", 0xF800},
+    {"VERDE",    0x07E0},
+    {"AZUL",     0x001F},
+    {"MAGENTA",  0xF81F},
+    {"AMARELO",  0xFFE0},
+    {"CIANO",    0x07FF}
+};
+
+```
+
+Esse array permite que a função `buscar_cor()` compare a entrada digitada pelo usuário com os nomes das cores e retorne o valor correspondente para uso no desenho.
+
+---
+
 ## Funções de Utilidade
 
 ### `limpar_teclas()`
