@@ -188,5 +188,3 @@ Pinta todos os pixels da tela com a cor fornecida. Usado para limpar ou redefini
 * Exportação de frames ou prints
 
 ---
-
-Esse README pode ser usado como base para a documentação no GitHub do projeto. Se quiser, posso complementar com exemplos, prints de uso ou estrutura de diretórios.
